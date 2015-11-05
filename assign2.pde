@@ -125,7 +125,7 @@ void draw() {
       y = height;
     }
     if (x >= a-30 &&  x<= a+30 && y >= b-30 && y <=b+30){
-      d = d+20;
+      d = d+40;
       a=floor(random(420));
       b=floor(random(400));
     }
