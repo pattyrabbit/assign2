@@ -112,17 +112,17 @@ void draw() {
     }
 
     // boundary detection
-    if (x > width) {
-      x = 0;
+    if (x > 590) {
+      x = 590;
     }
     if (x < 0) {
-      x = width;
+      x = 0;
     }
-    if (y > height) {
-      y = 0;
+    if (y > 430) {
+      y = 430;
     }
     if (y < 0) {
-      y = height;
+      y = 0;
     }
     if (x >= a-30 &&  x<= a+30 && y >= b-30 && y <=b+30){
       d = d+40;
@@ -135,8 +135,6 @@ void draw() {
     }
     
     if (x >= c-50 &&  x<= c+50 && y >= 100 && y <=200){ 
-      x = width/2;
-      y = height/2;
       d = d-40;
       c = 0;
     }
@@ -150,6 +148,8 @@ void draw() {
       if (mousePressed) {
         image(end2Img, 0, 0);
         gameState = GAME_PLAYING;
+        x = width/2;
+        y = height/2;
       } else {
         noStroke();
         fill(255, 255, 0, 100);
